@@ -2,15 +2,15 @@
   gap: 20px;
   display: grid;
   outline: 1px solid $border;
-  margin-block: 20px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   padding: 8px;
   border-radius: 5px;
 
   @include md {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   @include lg {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   &__img {
@@ -61,13 +61,17 @@
     &--preview {
       font-size: 0.9rem;
       line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     &--footer {
       width: 100%;
       margin-top: auto;
-      margin-bottom: 8px;
       @include flex(center, space-between);
       font-size: 0.9rem;
+      margin-top: 25px;
 
       a {
         @include flex(center, center);

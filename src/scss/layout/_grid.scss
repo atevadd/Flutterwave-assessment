@@ -1,0 +1,13 @@
+@use "@/scss/abstracts/_mixins.scss" as *;
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+
+  @include md {
+    width: 90%;
+  }
+  @include lg {
+    width: 85%;
+  }
+}

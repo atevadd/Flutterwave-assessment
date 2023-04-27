@@ -1,0 +1,17 @@
+.nav {
+  position: relative;
+
+  .container {
+    @include flex(center, space-between);
+    padding-block: 20px;
+  }
+
+  &__links {
+    @include flex(center, center);
+    gap: 10px;
+  }
+  &__link--seperator {
+    color: $black-20;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,28 @@
+// ================ BREAKPOINTS ======================
+
+// tablet devices
+@mixin md {
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+// ================= REUSEABLE STYLES =============
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// displays
+@mixin flex($align, $justify, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}

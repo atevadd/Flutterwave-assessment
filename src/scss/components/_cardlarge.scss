@@ -1,15 +1,22 @@
 .card {
   gap: 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   outline: 1px solid $border;
   margin-block: 20px;
   padding: 8px;
   border-radius: 5px;
 
   @include md {
-    grid-template-columns: 2fr 3fr;
+    display: flex;
+    flex-direction: column;
   }
   @include lg {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  @include xlg {
+    display: grid;
     grid-template-columns: 2fr 3fr;
   }
 
@@ -22,6 +29,8 @@
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     figcaption {

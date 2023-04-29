@@ -7,19 +7,19 @@
       </router-link>
 
       <nav class="nav__links">
-        <router-link to="/about" class="nav__link"
+        <router-link to="/" class="nav__link"
           ><img src="@/assets/icon/twitter.svg" alt="twitter"
         /></router-link>
         <span class="nav__link--seperator">&bull;</span>
-        <router-link to="/about" class="nav__link"
+        <router-link to="/" class="nav__link"
           ><img src="@/assets/icon/dribbble.svg" alt="dribbble"
         /></router-link>
         <span class="nav__link--seperator">&bull;</span>
-        <router-link to="/about" class="nav__link"
+        <router-link to="/" class="nav__link"
           ><img src="@/assets/icon/figma.svg" alt="figma"
         /></router-link>
         <span class="nav__link--seperator">&bull;</span>
-        <router-link to="/about" class="nav__link"
+        <router-link to="/" class="nav__link"
           ><img src="@/assets/icon/github.svg" alt="github"
         /></router-link>
       </nav>

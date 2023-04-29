@@ -8,7 +8,13 @@
 }
 
 @mixin lg {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 769px) and (max-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin xlg {
+  @media screen and (min-width: 1300px) {
     @content;
   }
 }

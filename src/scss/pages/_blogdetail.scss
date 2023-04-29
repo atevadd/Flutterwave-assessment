@@ -1,0 +1,66 @@
+.blog {
+  width: 100%;
+  margin-inline: auto;
+  margin-block: 30px;
+
+  @include md {
+    width: 85%;
+  }
+  @include lg {
+    width: 75%;
+  }
+  @include xlg {
+    width: 75%;
+  }
+
+  &__meta {
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    span {
+      color: $black;
+      margin-right: 7px;
+    }
+  }
+  &__title {
+    color: $black;
+    font-weight: 900;
+    margin-block: 5px 15px;
+  }
+  &__img {
+    margin-inline: auto;
+    margin-block: 40px;
+  }
+}
+
+.more {
+  width: 100%;
+  margin-block: 80px 0;
+  padding-bottom: 100px;
+
+  @include md {
+    width: 90%;
+  }
+  @include lg {
+    width: 100%;
+  }
+  @include xlg {
+    width: 85%;
+  }
+
+  &__header {
+    font-size: 1rem;
+    color: $black;
+    margin-bottom: 15px;
+
+    h2 {
+      font-weight: 900;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 35px;
+  }
+}

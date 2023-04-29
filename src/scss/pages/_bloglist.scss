@@ -1,7 +1,9 @@
-.grid {
+.list {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 40px;
+  padding-bottom: 50px;
+  margin-top: 30px;
 
   @include md {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -17,5 +19,19 @@
     @include lg {
       grid-column: 1 / 4;
     }
+  }
+}
+.skeleton-loader {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 40px;
+  padding-bottom: 50px;
+  margin-top: 30px;
+
+  @include md {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include lg {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

@@ -62,13 +62,8 @@ const { isLoading, isError, data, error } = usePostQuery();
 
 // route oject
 const route = useRoute();
-// blog store
-// const blog = useBlogStore();
 
-// const query = useQueryClient();
-
-// const posts = query.getQueryData("posts");
-
+// filter all blog to get current blog
 blog.currentBlog = data.value?.filter((post) => {
   return post.slug == route.params.slug;
 });

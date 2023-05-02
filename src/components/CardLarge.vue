@@ -1,7 +1,7 @@
 <template>
   <article class="card">
     <figure class="card__img">
-      <img :src="img" alt="" />
+      <img :src="img" alt="" loading="lazy" />
       <figcaption>{{ title }}</figcaption>
     </figure>
 
@@ -16,7 +16,10 @@
         </p>
 
         <h3 class="card__details--title">
-          <router-link :to="{ name: 'blog-detail', params: { slug: slug } }">
+          <router-link
+            :to="{ name: 'blog-detail', params: { slug: slug } }"
+            :title="title"
+          >
             <span v-html="title"></span
           ></router-link>
         </h3>

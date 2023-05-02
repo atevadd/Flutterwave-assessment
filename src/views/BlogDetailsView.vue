@@ -6,7 +6,9 @@
       >
       {{ moment(blog?.currentBlog[0]?.time).startOf("hour").fromNow() }}
     </h4>
-    <h1 class="blog__title">{{ blog?.currentBlog[0]?.title?.rendered }}s</h1>
+    <h1 class="blog__title">
+      <span v-html="blog?.currentBlog[0]?.title?.rendered"></span>
+    </h1>
     <div
       class="blog__content"
       v-html="blog?.currentBlog[0]?.content?.rendered"

@@ -7,10 +7,12 @@ import router from "./router";
 
 import "./assets/reset.css";
 import { VueQueryPlugin } from "vue-query";
+import Flutterwave from "flutterwave-vue3";
 
 const app = createApp(App);
 
 app.use(VueQueryPlugin);
+app.use(Flutterwave);
 app.use(createPinia());
 app.use(router);
 

@@ -11,6 +11,9 @@
   @include lg {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  @include xlg {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 
   .spread {
     @include md {
@@ -33,5 +36,53 @@
   }
   @include lg {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include xlg {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.join {
+  width: 100%;
+  @include flex(center, center, column);
+  margin-block: 40px;
+
+  &__headline {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    color: $black-20;
+
+    @include md {
+      width: 80%;
+    }
+    @include lg {
+      width: 50%;
+    }
+    @include xlg {
+      width: 70%;
+    }
+  }
+  &__cta {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #000;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    transition: background 150ms ease;
+
+    &:hover {
+      background-color: lighten($color: #000000, $amount: 10);
+    }
   }
 }

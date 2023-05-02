@@ -13,5 +13,7 @@ export const useBlogStore = defineStore("blog", () => {
     }
   }
 
-  return { getBlogPost };
+  const currentBlog = ref([]);
+
+  return { getBlogPost, currentBlog };
 });

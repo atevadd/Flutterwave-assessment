@@ -31,6 +31,39 @@
     margin-inline: auto;
     margin-block: 40px;
   }
+  &__content {
+    // background-color: red;
+    p {
+      margin-bottom: 25px;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    strong {
+      color: $black;
+    }
+    a {
+      text-decoration: underline;
+      color: $black;
+    }
+    ul {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    [id^="attachment_"] {
+      width: 100%;
+      max-width: 100%;
+      margin-inline: auto;
+
+      img {
+        height: auto;
+      }
+    }
+    .embed {
+      margin-block: 50px;
+    }
+  }
 }
 
 .more {

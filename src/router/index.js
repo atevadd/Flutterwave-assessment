@@ -9,11 +9,14 @@ const router = createRouter({
       component: () => import("../views/BlogListingView.vue"),
     },
     {
-      path: "/blog/:id",
+      path: "/blog/:slug",
       name: "blog-detail",
       component: () => import("../views/BlogDetailsView.vue"),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 
 export default router;

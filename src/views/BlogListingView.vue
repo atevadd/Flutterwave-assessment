@@ -65,36 +65,27 @@ const { isLoading, isError, data, error } = usePostQuery();
 const apiKey = import.meta.env.VITE_FLUTTERWAVE_PK;
 
 const makePayment = () => {
-  //this will launch Fluterwave payment modal
-  useFlutterwave({
-    amount: 4000, //amount
-    callback(data) {
-      //  TODO: handle callbacks
-      console.log("success");
-    },
-    country: "NG",
+  FlutterwaveCheckout({
+    public_key: apiKey,
+    tx_ref: "titanic-48981487343MDI0NzMx",
+    amount: 54600,
     currency: "NGN",
+    payment_options: "card",
+    redirect_url: "https://glaciers.titanic.com/handle-flutterwave-payment",
+    meta: {
+      consumer_id: 23,
+      consumer_mac: "92a3-912ba-1192a",
+    },
     customer: {
       email: "adeniyitofunmi@gmail.com",
-      name: "adewale",
-      phone_number: "+2347086967055",
+      phone_number: "08102909304",
+      name: "Tofunmi Adeniyi",
     },
     customizations: {
-      description: "Pay with yourCompanyname",
-      logo: "",
-      title: "YourCompany",
+      title: "The Titanic Store",
+      description: "Payment for an awesome cruise",
+      logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
     },
-    meta: {
-      user_id: 1,
-      token: "jdjdjdjdjd",
-    },
-    onclose() {
-      console.log("window closed");
-    },
-    payment_options: "card",
-    public_key: apiKey,
-    redirect_url: undefined,
-    tx_ref: "tx_ref_herer_h92hjyj3",
   });
 };
 </script>
